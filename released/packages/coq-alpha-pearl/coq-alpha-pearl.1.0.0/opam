@@ -1,0 +1,41 @@
+opam-version: "2.0"
+synopsis: "A formalization of 'Alpha-conversion made easy' (Altenkirch, 2002)"
+description: """
+A Coq formalization of ``Functional Pearls: alpha-conversion is easy'' (Altenkirch,
+2002). To our knowledge, all of the main results contained within the paper itself have been formalized.
+"""
+
+homepage: "https://github.com/jgrosso/coq-alpha-pearl"
+dev-repo: "git+https://github.com/jgrosso/coq-alpha-pearl.git"
+bug-reports: "https://github.com/jgrosso/coq-alpha-pearl/issues"
+doc: "https://github.com/jgrosso/coq-alpha-pearl/blob/main/README.pdf"
+maintainer: "jgrosso@caltech.edu"
+author: [
+  "Joshua Grosso"
+]
+license: "MIT"
+
+depends: [
+  "coq" {>= "8.13"}
+]
+
+build: [
+  [make "-j%{jobs}%"]
+]
+install: [
+  [make "install"]
+]
+
+url {
+  src: "https://github.com/jgrosso/coq-alpha-pearl/archive/1.0.0.tar.gz"
+  checksum: "sha256=e33658b08b68380f505303bb8db775358fecd422abd5bf166648736de336bdca"
+}
+
+tags: [
+  "keyword:alpha-equivalence"
+  "keyword:lambda calculus"
+  "category:CS/Algo/Correctness proofs of algorithms"
+  "category:CS/Lambda Calculi"
+  "date:2021-10-07"
+  "logpath:AlphaPearl"
+]
